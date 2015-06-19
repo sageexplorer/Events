@@ -1,0 +1,45 @@
+Welcome to EventSay!!!
+<% if current_user %> <a href="/logout">Logout</a> <br>
+    You are logged in as <%= current_user["email"] %>
+<% end %>
+
+<h1>EventSay</h1>
+
+
+<% if current_user %>  <br>
+
+    <% @events.each_with_index do |f, i| %>
+        <div id="main">
+          <h2> Event <%= "#{i+1}" %>:<%= f.name %> <br></h2>
+          <%= f.day %> at
+          <%= f.time %>,
+          <%= f.suggest %>
+          <div id="venue"> Venue Pick: <%= f.place %></div>
+          <% f.comment if not nil %>
+          <br>
+          created by <%= created_by(f.user_id) %>
+          <% if created_by(f.user_id) == current_user["email"] %>
+              <a href="/delete">Delete this event</a>
+          <% end %>
+        </div>
+        <% if flash[:message] %>
+            <b><%= flash[:message] %></b>
+        <% end %>
+
+    <% end %>
+
+    <br> <br>
+
+    <h3>Event Suggestion</h3>
+
+    Suggestion based on your friends' interest for this event is:
+    <%= suggest %>
+    <br><br>
+
+<% else %>
+    <a href="/login">Login</a> <br>
+<% end %>
+
+
+<br>
+<a href="/events/new">Create a new event:</a>

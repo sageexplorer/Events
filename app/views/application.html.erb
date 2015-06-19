@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Events Say</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+
+<% if flash[:message] %>
+    <b><%= flash[:message] %></b>
+<% end %>
+
+<% if current_user %>
+    You are logged in | <a href="/logout">Logout</a>
+<% else %>
+    you are not logged in | <a href="/login">Login</a>
+<% end %>
+
+
+
+<%= yield %>
+
+</body>
+</html>

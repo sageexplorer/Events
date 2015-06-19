@@ -1,0 +1,17 @@
+<h1> Login </h1>
+
+<div class="Failure">
+<% if flash[:message] %>
+    <b><%= flash[:message] %></b>
+<% end %>
+</div>
+<%= form_tag '/login' do %>
+
+    <%= label_tag :email %>
+    <%= text_field_tag :email %><br><br>
+    <%= label_tag :password %>
+    <%= text_field_tag :password %>
+    <%= submit_tag 'login' %> <br><br>
+    Don't have a login? <a href ="users/new">Signup</a>
+
+<% end %>
