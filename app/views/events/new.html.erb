@@ -1,12 +1,11 @@
-
-
-Add new Event here.
-You are logged in as <%= current_user["email"] %>
-<br>
-<a href ="/logout">Logout</a>
-<br>
+You are logged in as <%= current_user["email"] %>  <a href ="/logout">Logout</a>
+<br> <br>
+<a href ="/">Home</a>
+<br> <br>
+Add new Reminders here.
 <br>
 
+<br>
 <% if flash[:message] %>
     <b><%= flash[:message] %></b>
 <% end %>
@@ -17,18 +16,20 @@ You are logged in as <%= current_user["email"] %>
     <%= f.text_field :name %>
     <br><br>
 
-    <%= f.label :day %>
-    <%= f.date_field :day %>
+    <%= f.label :Date %>
+     <%= date_select :day, "day" %>
+
     <br><br>
     <%= f.label :time %>
-    <%= f.text_field :time %>
+    <!--<%= f.text_field(:time, :placeholder => "Enter time..eg. 5:30PM", :class => "textareastyle") %>-->
+    <%= time_select :time, "time" %>
     <br><br>
 
-    <%= f.label :place %>
+    <%= f.label :phone %>
     <%= f.text_field :place %>
     <br><br>
 
-    <%= f.label :suggest %>
+    <%= f.label :message %>
     <%= f.text_field :suggest %>
     <br><br>
 
@@ -39,19 +40,19 @@ You are logged in as <%= current_user["email"] %>
 
 
 
-    <%= f.submit 'Create Event' %>
+    <%= f.submit 'Create Message' %>
 
 <% end %>
 <br> <br>
-Invite people to an Event
-<br>
+<!--Invite people to an Event-->
+<!--<br>-->
 
-<%= form_for @event do |f| %>
+<!--<%= form_for @event do |f| %>-->
 
-    <%= f.label :email %>
-    <%= f.text_field :day %>
-    <br>
+    <!--<%= f.label :email %>-->
+    <!--<%= f.text_field :day %>-->
+    <!--<br>-->
 
-    <%= f.submit 'Invite People' %>
+    <!--<%= f.submit 'Invite People' %>-->
 
-<% end %>
+<!--<% end %>-->

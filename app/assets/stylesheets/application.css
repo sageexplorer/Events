@@ -184,6 +184,14 @@ tr{
 }
 
 
+.textareastyle {
+
+    color: grey;
+
+}
+#message {
+    color: BLUE;
+}
 
 h1{
     font-size: 32px;
