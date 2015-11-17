@@ -27,6 +27,12 @@ class EventsController < ApplicationController
 
     selected_hour = params[:time]["time(4i)"].to_s
     selected_minute = params[:time]["time(5i)"].to_s
+
+    puts "HEY GUYS" 
+    puts selected_minute, selected_hour
+    puts "HEY GUYS"
+    puts "HEY GUYS"
+
     @event["time"] = selected_hour.to_s+":"+selected_minute.to_s
 
     user = current_user[:id]
