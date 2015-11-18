@@ -53,3 +53,6 @@ gem 'twilio-ruby'
 gem 'jquery-ui-rails'
 
 gem 'rufus-scheduler'
+
+
+ruby '2.0.0'
