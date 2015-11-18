@@ -25,8 +25,8 @@ class EventsController < ApplicationController
     selected_year = params[:day]["day(3i)"].to_i
     @event["day"]= Date.new(selected_day, selected_month, selected_year)
 
-    selected_hour = params[:time]["time(4i)"].to_s
-    selected_minute = params[:time]["time(5i)"].to_s
+    selected_hour = params[:time]["time(4i)"]
+    selected_minute = params[:time]["time(5i)"]
 
     puts "HEY GUYS"
     puts selected_minute, selected_hour
