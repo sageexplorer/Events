@@ -34,7 +34,7 @@ class EventsController < ApplicationController
     puts "HEY GUYS"
 
 
-    event[:time] = selected_minute.to_s
+    event["time"] = selected_minute.to_s
     #@event[:time] = "#{selected_hour}:#{selected_minute}".to_s
 
     user = current_user[:id]
