@@ -24,7 +24,8 @@ class ApplicationController < ActionController::Base
 
   end
 
-  helper_method :current_user, :created_by, :authorize, :suggest
+
+  helper_method :current_user, :created_by, :authorize, :suggest, :get_time
 
 
   def authorize

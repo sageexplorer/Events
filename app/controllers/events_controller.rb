@@ -31,7 +31,7 @@ class EventsController < ApplicationController
 
 
     _time_ = "#{selected_hour}:#{selected_minute}"
-
+    @event_time = _time_
     @event[:time]= _time_
 
     user = current_user[:id]
