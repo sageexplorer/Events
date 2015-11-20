@@ -49203,3 +49203,90 @@ Processing by HomeController#home as HTML
 Completed 200 OK in 26ms (Views: 24.6ms | ActiveRecord: 0.6ms)
   [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2015-11-19"]]
   [1m[35mEvent Load (0.7ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2015-11-19"]]
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2015-11-19"]]
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2015-11-19"]]
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2015-11-19"]]
+
+
+Started GET "/home" for 127.0.0.1 at 2015-11-19 20:06:44 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#home as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mEvent Load (0.6ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  Rendered home/home.html.erb within layouts/application (25.1ms)
+Completed 200 OK in 301ms (Views: 278.2ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2015-11-19 20:06:45 -0800
+Processing by HomeController#home as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  Rendered home/home.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 24ms (Views: 23.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.self-ae7244befbbfe79a541de47175570a866b8ad85f7b68bef64d81a2ebd59ff641.css?body=1" for 127.0.0.1 at 2015-11-19 20:06:45 -0800
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 127.0.0.1 at 2015-11-19 20:06:45 -0800
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-11-19 20:06:45 -0800
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2015-11-19 20:06:45 -0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-11-19 20:06:45 -0800
+
+
+Started GET "/events/new" for 127.0.0.1 at 2015-11-19 20:06:47 -0800
+Processing by EventsController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered events/new.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 36ms (Views: 34.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2015-11-19 20:06:53 -0800
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VVrI18Y9Klfc+cNKY0+lxpf/iuGkW6BmC3wfbD/97qqWHasHDULrOjyPoyfLP6Ryyl+2+2MNBp42pZ/wyMI5EA==", "event"=>{"name"=>"Go pay phone", "place"=>"3109932871", "suggest"=>"This is awesome", "comment"=>""}, "day"=>{"day(1i)"=>"2015", "day(2i)"=>"11", "day(3i)"=>"20"}, "time"=>{"time(1i)"=>"2015", "time(2i)"=>"11", "time(3i)"=>"20", "time(4i)"=>"04", "time(5i)"=>"06"}, "commit"=>"Create Message"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "events" ("name", "place", "suggest", "comment", "day", "time", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Go pay phone"], ["place", "3109932871"], ["suggest", "This is awesome"], ["comment", ""], ["day", "2015-11-20"], ["time", "2000-01-01 04:06:00.000000"], ["user_id", "1"], ["created_at", "2015-11-20 04:06:53.508277"], ["updated_at", "2015-11-20 04:06:53.508277"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/home
+Completed 302 Found in 5ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2015-11-19 20:06:53 -0800
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events"
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  Rendered home/home.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 71ms (Views: 69.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/delete" for 127.0.0.1 at 2015-11-19 20:06:58 -0800
+Processing by EventsController#destroy as HTML
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT  "events".* FROM "events" LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  DELETE FROM "events" WHERE "events"."id" = $1  [["id", 93]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-11-19 20:06:58 -0800
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  Rendered home/home.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 22ms (Views: 21.4ms | ActiveRecord: 0.6ms)

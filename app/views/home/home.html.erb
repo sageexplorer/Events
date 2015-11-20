@@ -18,7 +18,7 @@ An app that let's you send future text message reminders.
           <% if created_by(f.user_id) == current_user["email"] %>
               <h2> Reminder: <%= f.name %> <br></h2>
               <%= f.day %> at
-              <%= f.time.strftime("%H:%M") %>
+              <%= f.time %>
               <br><br>
 
               <div id="message"> Message: <%= f.suggest %> </div>

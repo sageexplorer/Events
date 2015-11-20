@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6a4bf07-e15a-4807-9aa5-785bc3b1e4f8" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/controllers/test.rb" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Events.iml" afterPath="$PROJECT_DIR$/.idea/Events.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/development.log" afterPath="$PROJECT_DIR$/log/development.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/events_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/events_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/home.html.erb" afterPath="$PROJECT_DIR$/app/views/home/home.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/events/new.html.erb" afterPath="$PROJECT_DIR$/app/views/events/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/seeds.rb" afterPath="$PROJECT_DIR$/db/seeds.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Events.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,10 +32,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="events_controller.rb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/controllers/events_controller.rb">
+      <file leaf-file-name="home.html.erb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/home/home.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="72" column="43" selection-start="1414" selection-end="1414" vertical-scroll-proportion="0.5148515" vertical-offset="768" max-vertical-offset="1830">
+            <state line="20" column="24" selection-start="508" selection-end="508" vertical-scroll-proportion="0.44329897" vertical-offset="42" max-vertical-offset="825">
               <folding />
             </state>
           </provider>
@@ -159,8 +153,8 @@
         <option value="$PROJECT_DIR$/db/migrate/20151118190844_change_columntoevents.rb" />
         <option value="$PROJECT_DIR$/app/views/events/new.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/test.rb" />
-        <option value="$PROJECT_DIR$/app/views/home/home.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/events_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/home/home.html.erb" />
       </list>
     </option>
   </component>
@@ -942,16 +936,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/home/home.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/events_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="42" selection-start="509" selection-end="526" vertical-scroll-proportion="0.44329897" vertical-offset="42" max-vertical-offset="825">
+        <state line="33" column="0" selection-start="683" selection-end="683" vertical-scroll-proportion="0.47854784" vertical-offset="205" max-vertical-offset="1725">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/events_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/home/home.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="43" selection-start="1414" selection-end="1414" vertical-scroll-proportion="0.5148515" vertical-offset="768" max-vertical-offset="1830">
+        <state line="20" column="24" selection-start="508" selection-end="508" vertical-scroll-proportion="0.44329897" vertical-offset="42" max-vertical-offset="825">
           <folding />
         </state>
       </provider>

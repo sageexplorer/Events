@@ -29,15 +29,8 @@ class EventsController < ApplicationController
     selected_hour = params[:time]["time(4i)"]
     selected_minute = params[:time]["time(5i)"]
 
-    puts "HEY GUYS"
-    puts selected_minute, selected_hour
-    puts "HEY GUYS"
-    puts "HEY GUYS"
-
 
     _time_ = "#{selected_hour}:#{selected_minute}"
-
-    #@event[:time] = t.strftime("%H:%M:%S")
 
     @event[:time]= _time_
 
