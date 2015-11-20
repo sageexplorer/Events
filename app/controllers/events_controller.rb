@@ -25,18 +25,21 @@ class EventsController < ApplicationController
     selected_year = params[:day]["day(3i)"].to_i
     @event["day"]= Date.new(selected_day, selected_month, selected_year)
 
-    selected_hour = params[:time]["time(4i)"].to_s
-    selected_minute = params[:time]["time(5i)"].to_s
+
+    selected_hour = params[:time]["time(4i)"]
+    selected_minute = params[:time]["time(5i)"]
 
     puts "HEY GUYS"
     puts selected_minute, selected_hour
     puts "HEY GUYS"
     puts "HEY GUYS"
 
-    _time_ = selected_hour +  selected_minute
 
-    @event["time"] = _time_
-    #@event[:time] = "#{selected_hour}:#{selected_minute}".to_s
+    _time_ = "#{selected_hour}:#{selected_minute}"
+
+    #@event[:time] = t.strftime("%H:%M:%S")
+
+    @event[:time]= _time_
 
     user = current_user[:id]
     @event.user_id= user
@@ -67,7 +70,7 @@ class EventsController < ApplicationController
     time = Time.new
     time = time.strftime("%H:%M")
     @message.each do |t|
-      if t[:time] == time
+      if t[:time].strftime("%H:%M") == time
         message= t["suggest"]
         phone = t["place"]
         begin
