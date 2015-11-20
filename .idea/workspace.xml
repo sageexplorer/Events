@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6a4bf07-e15a-4807-9aa5-785bc3b1e4f8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/development.log" afterPath="$PROJECT_DIR$/log/development.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/events_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/events_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/home.html.erb" afterPath="$PROJECT_DIR$/app/views/home/home.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/scheduler.rb" afterPath="$PROJECT_DIR$/config/initializers/scheduler.rb" />
     </list>
     <ignored path="Events.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,10 +30,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="events_controller.rb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/controllers/events_controller.rb">
+      <file leaf-file-name="scheduler.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config/initializers/scheduler.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="65" column="35" selection-start="1267" selection-end="1284" vertical-scroll-proportion="0.57755774" vertical-offset="625" max-vertical-offset="1725">
+            <state line="5" column="33" selection-start="96" selection-end="96" vertical-scroll-proportion="0.12376238" vertical-offset="0" max-vertical-offset="606">
               <folding />
             </state>
           </provider>
@@ -148,7 +144,6 @@
         <option value="$PROJECT_DIR$/db/migrate/20151112033444_changecolumnontime.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20151112034829_newcolumnadd.rb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
-        <option value="$PROJECT_DIR$/config/initializers/scheduler.rb" />
         <option value="$PROJECT_DIR$/db/seeds.rb" />
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/Procfile" />
@@ -158,12 +153,13 @@
         <option value="$PROJECT_DIR$/app/controllers/events_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/home/home.html.erb" />
+        <option value="$PROJECT_DIR$/config/initializers/scheduler.rb" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="23" />
+    <option name="x" value="29" />
+    <option name="y" value="25" />
     <option name="width" value="1421" />
     <option name="height" value="827" />
   </component>
@@ -664,7 +660,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="23" width="1421" height="827" extended-state="0" />
+    <frame x="29" y="25" width="1421" height="827" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -954,13 +950,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/initializers/scheduler.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="13" selection-start="200" selection-end="200" vertical-scroll-proportion="0.24752475" vertical-offset="0" max-vertical-offset="606">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/events/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="0" selection-start="22" selection-end="22" vertical-scroll-proportion="0.025773196" vertical-offset="0" max-vertical-offset="582">
@@ -975,6 +964,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/events_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="0" selection-start="1057" selection-end="1057" vertical-scroll-proportion="0.40429044" vertical-offset="625" max-vertical-offset="1725">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/home.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="0" selection-start="553" selection-end="553" vertical-scroll-proportion="0.5670103" vertical-offset="0" max-vertical-offset="825">
@@ -982,9 +978,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/events_controller.rb">
+    <entry file="file://$PROJECT_DIR$/config/initializers/scheduler.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="35" selection-start="1267" selection-end="1284" vertical-scroll-proportion="0.57755774" vertical-offset="625" max-vertical-offset="1725">
+        <state line="5" column="33" selection-start="96" selection-end="96" vertical-scroll-proportion="0.12376238" vertical-offset="0" max-vertical-offset="606">
           <folding />
         </state>
       </provider>
