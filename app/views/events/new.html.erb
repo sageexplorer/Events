@@ -22,7 +22,7 @@ Add new Reminders here.
     <br><br>
     <%= f.label :time %>
     <!--<%= f.text_field(:time, :placeholder => "Enter time..eg. 5:30PM", :class => "textareastyle") %>-->
-    <%= time_select :time, "time",{ampm: true}
+    <%= time_select :time, "time",{ampm: true}, {minute_step:15}
     %>
     <br><br>
 

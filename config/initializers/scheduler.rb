@@ -4,8 +4,8 @@ require 'rufus-scheduler'
 class Schedule < EventsController
 
   @message = EventsController.new
-  scheduler = Rufus::Scheduler.singleton
-  #scheduler = Rufus::Scheduler.start_new
+  #scheduler = Rufus::Scheduler.singleton
+  scheduler = Rufus::Scheduler.start_new
   scheduler.every("50s") do
   @message.send_now
   #puts "hey"

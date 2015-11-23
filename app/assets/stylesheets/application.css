@@ -49,6 +49,7 @@ label{
 body {
     position: relative;
     background-color:white;
+    padding: 30px;
     width: 775px;
     height: auto;
     margin: 0 auto;
@@ -132,7 +133,7 @@ input[type=submit] {
 #main {
 
     background-color: beige;
-
+    border-radius: 15px;
 
 
 }
@@ -217,6 +218,13 @@ input {
     background-color: #ffffff;
 
 
+}
+html {
+    background: url(SMS-check-in.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 
