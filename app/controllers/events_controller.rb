@@ -69,7 +69,7 @@ class EventsController < ApplicationController
       i = 0
       v = 0
       time_spread = []
-      while i < 10 do
+      while i < 15 do
         v = v + 60
         time = Time.now + v
         i+=1
