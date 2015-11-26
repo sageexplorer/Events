@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6a4bf07-e15a-4807-9aa5-785bc3b1e4f8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.rakeTasks" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Events.iml" afterPath="$PROJECT_DIR$/.idea/Events.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/development.log" afterPath="$PROJECT_DIR$/log/development.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/events_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/events_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/home.html.erb" afterPath="$PROJECT_DIR$/app/views/home/home.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/sessions/new.html.erb" afterPath="$PROJECT_DIR$/app/views/sessions/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/scheduler.rb" afterPath="$PROJECT_DIR$/config/initializers/scheduler.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Events.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -81,7 +73,7 @@
       <file leaf-file-name="home.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/home/home.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="13" selection-start="1075" selection-end="1075" vertical-scroll-proportion="0.8231827" vertical-offset="286" max-vertical-offset="795">
+            <state line="42" column="10" selection-start="1035" selection-end="1035" vertical-scroll-proportion="0.7917485" vertical-offset="227" max-vertical-offset="825">
               <folding />
             </state>
           </provider>
@@ -1098,7 +1090,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/home.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="13" selection-start="1075" selection-end="1075" vertical-scroll-proportion="0.8231827" vertical-offset="286" max-vertical-offset="795">
+        <state line="42" column="10" selection-start="1035" selection-end="1035" vertical-scroll-proportion="0.7917485" vertical-offset="227" max-vertical-offset="825">
           <folding />
         </state>
       </provider>
