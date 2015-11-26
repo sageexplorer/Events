@@ -63,20 +63,7 @@ class EventsController < ApplicationController
     time = Time.new
     time = time.strftime("%H:%M")
     @message.each do |t|
-      #if t[:time].strftime("%H:%M") == time
-
-        #Time spread contains time from not till 10 minutes from now
-      i = 0
-      v = 0
-      time_spread = []
-      while i < 10 do
-        v = v + 60
-        time = Time.now + v
-        i+=1
-        time_spread.push(time.strftime("%H:%M"))
-      end
-        #If time from now till 10 minutes from now contains the time in the database
-        if time_spread.include? (t[:time].strftime("%H:%M"))
+      if t[:time].strftime("%H:%M") == time
 
         message= t["suggest"]
         phone = t["place"]
@@ -114,7 +101,7 @@ class EventsController < ApplicationController
     @event=Event.find_by(params[:id])
     @event.delete
     redirect_to "/"
-    end
+  end
 
   private
   def event_params

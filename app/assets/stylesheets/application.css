@@ -48,11 +48,13 @@ label{
 
 body {
     position: relative;
-    background-color:white;
+    background-color: white;
     padding: 30px;
     width: 775px;
     height: auto;
     margin: 0 auto;
+    border-radius: 15px;
+
 }
 
 
