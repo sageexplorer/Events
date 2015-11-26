@@ -27,15 +27,17 @@
 
               <a href="/delete">Delete this Reminder</a>
               <br> <br>
+              <br>
+              <a href="/events/new">Create a new message</a> <br>
+              <br> <br>
+
           <% end %>
         </div>
         <% if flash[:message] %>
             <b><%= flash[:message] %></b>
         <% end %>
 
-        <br>
-        <a href="/events/new">Create a new message</a> <br>
-        <br>
+
 
     <% end %>
 
