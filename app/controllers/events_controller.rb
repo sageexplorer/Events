@@ -64,16 +64,15 @@ class EventsController < ApplicationController
     time = time.strftime("%H:%M")
     @message.each do |t|
       #if t[:time].strftime("%H:%M") == time
-
-        #Time spread contains time from not till 10 minutes from now
+      #Time spread contains time from not till 10 minutes from now
       i = 0
       v = 0
       time_spread = []
       while i < 15 do
         v = v + 60
-        time = Time.now + v
+        time_ = Time.now + v
         i+=1
-        time_spread.push(time.strftime("%H:%M"))
+        time_spread.push(time_.strftime("%H:%M"))
       end
         #If time from now till 10 minutes from now contains the time in the database
         if time_spread.include? (t[:time].strftime("%H:%M"))
