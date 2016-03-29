@@ -54010,3 +54010,1083 @@ Started GET "/login" for 127.0.0.1 at 2015-11-25 21:09:58 -0800
 Processing by SessionsController#new as HTML
   Rendered sessions/new.html.erb within layouts/application (0.4ms)
 Completed 200 OK in 18ms (Views: 17.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-01-13 12:47:49 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#home as HTML
+  Rendered home/home.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 711ms (Views: 691.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-4c48febcd1b10b33b7465032d037408aea96c5c1141ff982185669e4c8ebbded.css?body=1" for ::1 at 2016-01-13 12:47:50 -0800
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for ::1 at 2016-01-13 12:47:50 -0800
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for ::1 at 2016-01-13 12:47:50 -0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-13 12:47:50 -0800
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for ::1 at 2016-01-13 12:47:50 -0800
+
+
+Started GET "/login" for ::1 at 2016-01-13 12:47:52 -0800
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 21ms (Views: 19.9ms | ActiveRecord: 0.0ms)
+  [1m[35mEvent Load (1.6ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-01-13"]]
+
+
+Started POST "/login" for ::1 at 2016-01-13 12:47:57 -0800
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wPfU5RwKliMin5bO4yNfzEBiz7xqo1fVIN2iI37Hh7qW2zrIV2Vbg7FJZoEAbS7cLTrvKOApOL3qq18QxFSHIw==", "email"=>"lala@gmail.com", "password"=>"[FILTERED]", "commit"=>"login"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1[0m  [["email", "lala@gmail.com"]]
+Redirected to http://localhost:3000/home
+Completed 302 Found in 86ms (ActiveRecord: 6.6ms)
+
+
+Started GET "/home" for ::1 at 2016-01-13 12:47:57 -0800
+Processing by HomeController#home as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  Rendered home/home.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 34ms (Views: 31.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/events/new" for ::1 at 2016-01-13 12:47:59 -0800
+Processing by EventsController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered events/new.html.erb within layouts/application (22.0ms)
+Completed 200 OK in 99ms (Views: 97.5ms | ActiveRecord: 0.3ms)
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-01-13"]]
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-01-13"]]
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-01-13"]]
+
+
+Started POST "/events" for ::1 at 2016-01-13 12:48:25 -0800
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HL7sdeG5kvZeM992uTOtTHNEajvQwJ2OREVVU7uwFelKkgJYqtZfVs3lLzlafdxcHhxKr1pK8uaOM6hgASMVcA==", "event"=>{"name"=>"hey, this should work", "place"=>"3109932871", "suggest"=>"This is awesome", "comment"=>""}, "day"=>{"day(1i)"=>"2016", "day(2i)"=>"1", "day(3i)"=>"13"}, "time"=>{"time(1i)"=>"2016", "time(2i)"=>"1", "time(3i)"=>"13", "time(4i)"=>"12", "time(5i)"=>"50"}, "commit"=>"Create Message"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (5.5ms)[0m  INSERT INTO "events" ("name", "place", "suggest", "comment", "day", "time", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["name", "hey, this should work"], ["place", "3109932871"], ["suggest", "This is awesome"], ["comment", ""], ["day", "2016-01-13"], ["time", "2000-01-01 12:50:00.000000"], ["user_id", "1"], ["created_at", "2016-01-13 20:48:25.618982"], ["updated_at", "2016-01-13 20:48:25.618982"]]
+  [1m[36m (1.9ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/home
+Completed 302 Found in 17ms (ActiveRecord: 12.0ms)
+
+
+Started GET "/home" for ::1 at 2016-01-13 12:48:25 -0800
+Processing by HomeController#home as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  Rendered home/home.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 21ms (Views: 19.2ms | ActiveRecord: 0.8ms)
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-01-13"]]
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-01-13"]]
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-01-13"]]
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-01-13"]]
+  [1m[36mEvent Load (0.6ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-01-13"]]
+
+
+Started GET "/events/new" for ::1 at 2016-01-13 13:21:18 -0800
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Processing by EventsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered events/new.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 316ms (Views: 250.4ms | ActiveRecord: 3.9ms)
+  [1m[35mEvent Load (0.7ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-01-13"]]
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-01-13"]]
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-01-13"]]
+
+
+Started POST "/events" for ::1 at 2016-01-13 13:21:44 -0800
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rhFMQhYxxhrb6faCi8zqOq/nCMwPzngeassNp4ejcf74PaJvXV4Lukg/Bs1ogpsqwr8oWIVEF3agvfCUPTBxZw==", "event"=>{"name"=>"hello uoi", "place"=>"3109932871", "suggest"=>"This is awesome", "comment"=>""}, "day"=>{"day(1i)"=>"2016", "day(2i)"=>"1", "day(3i)"=>"13"}, "time"=>{"time(1i)"=>"2016", "time(2i)"=>"1", "time(3i)"=>"13", "time(4i)"=>"13", "time(5i)"=>"23"}, "commit"=>"Create Message"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "events" ("name", "place", "suggest", "comment", "day", "time", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "hello uoi"], ["place", "3109932871"], ["suggest", "This is awesome"], ["comment", ""], ["day", "2016-01-13"], ["time", "2000-01-01 13:23:00.000000"], ["user_id", "1"], ["created_at", "2016-01-13 21:21:44.264381"], ["updated_at", "2016-01-13 21:21:44.264381"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/home
+Completed 302 Found in 10ms (ActiveRecord: 4.9ms)
+
+
+Started GET "/home" for ::1 at 2016-01-13 13:21:44 -0800
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events"
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  Rendered home/home.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 23ms (Views: 21.5ms | ActiveRecord: 1.0ms)
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-01-13"]]
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-01-13"]]
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-01-13"]]
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-01-13"]]
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-01-13"]]
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-01-13"]]
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-01-13"]]
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-01-13"]]
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-01-13"]]
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-01-13"]]
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-01-13"]]
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-01-13"]]
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-01-13"]]
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-01-13"]]
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-01-13"]]
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-01-13"]]
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-01-13"]]
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-01-13"]]
+  [1m[36mEvent Load (0.5ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-01-13"]]
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-01-13"]]
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-01-13"]]
+
+
+Started GET "/events/new" for ::1 at 2016-01-13 13:27:20 -0800
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Processing by EventsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered events/new.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 264ms (Views: 239.1ms | ActiveRecord: 3.2ms)
+
+
+Started POST "/events" for ::1 at 2016-01-13 13:27:50 -0800
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ioP1rUFu8sa9TYatUe8h5Ek8HZdIDtko1G/gDIcGXZDcrxuACgE/Zi6bduKyoVD0JGQ9A8KEtkAeGR0/PZVdCQ==", "event"=>{"name"=>"AWS Rules", "place"=>"3109932871", "suggest"=>"This is awesome", "comment"=>""}, "day"=>{"day(1i)"=>"2016", "day(2i)"=>"1", "day(3i)"=>"13"}, "time"=>{"time(1i)"=>"2016", "time(2i)"=>"1", "time(3i)"=>"13", "time(4i)"=>"13", "time(5i)"=>"29"}, "commit"=>"Create Message"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "events" ("name", "place", "suggest", "comment", "day", "time", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["name", "AWS Rules"], ["place", "3109932871"], ["suggest", "This is awesome"], ["comment", ""], ["day", "2016-01-13"], ["time", "2000-01-01 13:29:00.000000"], ["user_id", "1"], ["created_at", "2016-01-13 21:27:50.407809"], ["updated_at", "2016-01-13 21:27:50.407809"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/home
+Completed 302 Found in 6ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/home" for ::1 at 2016-01-13 13:27:50 -0800
+Processing by HomeController#home as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  Rendered home/home.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 23ms (Views: 21.9ms | ActiveRecord: 0.8ms)
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-01-13"]]
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-01-13"]]
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-01-13"]]
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-01-13"]]
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-01-13"]]
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-01-13"]]
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-01-13"]]
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-01-13"]]
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-01-13"]]
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-01-13"]]
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-01-13"]]
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-01-13"]]
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-01-13"]]
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-01-13"]]
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-01-13"]]
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-01-13"]]
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-01-13"]]
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-01-13"]]
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-01-13"]]
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-01-13"]]
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-01-13"]]
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-01-13"]]
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-28 16:20:23 -0700
+
+PG::ConnectionBad (could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
+):
+  activerecord (4.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `initialize'
+  activerecord (4.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `new'
+  activerecord (4.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `connect'
+  activerecord (4.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:242:in `initialize'
+  activerecord (4.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:44:in `new'
+  activerecord (4.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:44:in `postgresql_connection'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:438:in `new_connection'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:448:in `checkout_new_connection'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
+  /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
+  activerecord (4.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:567:in `retrieve_connection'
+  activerecord (4.2.1) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.2.1) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.2.1) lib/active_record/migration.rb:384:in `connection'
+  activerecord (4.2.1) lib/active_record/migration.rb:371:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_call_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  puma (2.15.3) lib/puma/server.rb:541:in `handle_request'
+  puma (2.15.3) lib/puma/server.rb:388:in `process_client'
+  puma (2.15.3) lib/puma/server.rb:270:in `block in run'
+  puma (2.15.3) lib/puma/thread_pool.rb:106:in `call'
+  puma (2.15.3) lib/puma/thread_pool.rb:106:in `block in spawn_thread'
+
+
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (18.1ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (15.8ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Library/Ruby/Gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (40.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-28 16:21:03 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (3.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#home as HTML
+  Rendered home/home.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 267ms (Views: 249.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-4c48febcd1b10b33b7465032d037408aea96c5c1141ff982185669e4c8ebbded.css?body=1" for 127.0.0.1 at 2016-03-28 16:21:03 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2016-03-28 16:21:03 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 127.0.0.1 at 2016-03-28 16:21:03 -0700
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2016-03-28 16:21:03 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-03-28 16:21:03 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 127.0.0.1 at 2016-03-28 16:21:04 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-03-28 16:21:04 -0700
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2016-03-28 16:21:04 -0700
+
+
+Started GET "/login" for 127.0.0.1 at 2016-03-28 16:21:05 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 25ms (Views: 24.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2016-03-28 16:21:15 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EY0veqpFeLILGR0WoLSRBXEAzILq1In5+PQQDh2g+B0uFlJbEWcComjM0/xKJcWNubl4DCt+ZQXUJy1nuShWHw==", "email"=>"lala@gmail.com", "password"=>"[FILTERED]", "commit"=>"login"}
+  [1m[35mUser Load (1.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "lala@gmail.com"]]
+Redirected to http://localhost:3000/home
+Completed 302 Found in 135ms (ActiveRecord: 10.7ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2016-03-28 16:21:15 -0700
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mEvent Load (2.3ms)[0m  SELECT "events".* FROM "events"
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  Rendered home/home.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 37ms (Views: 31.6ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2016-03-28 16:21:19 -0700
+Processing by EventsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered events/new.html.erb within layouts/application (18.3ms)
+Completed 200 OK in 40ms (Views: 38.8ms | ActiveRecord: 0.3ms)
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-28"]]
+
+
+Started POST "/events" for 127.0.0.1 at 2016-03-28 16:21:44 -0700
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DnlNYvZ0DJU7WZy+Sd99l5Lr7Ntrlp3JYH9lHUf6ksgx4jBDTVZ2hViMUlSjTikfWlJYVao8cTVMrFh043I8yg==", "event"=>{"name"=>"now", "place"=>"3109932871", "suggest"=>"hey you", "comment"=>""}, "day"=>{"day(1i)"=>"2016", "day(2i)"=>"3", "day(3i)"=>"28"}, "time"=>{"time(1i)"=>"2016", "time(2i)"=>"3", "time(3i)"=>"28", "time(4i)"=>"16", "time(5i)"=>"23"}, "commit"=>"Create Message"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (2.6ms)[0m  [1mINSERT INTO "events" ("name", "place", "suggest", "comment", "day", "time", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "now"], ["place", "3109932871"], ["suggest", "hey you"], ["comment", ""], ["day", "2016-03-28"], ["time", "2000-01-01 16:23:00.000000"], ["user_id", "1"], ["created_at", "2016-03-28 23:21:44.189133"], ["updated_at", "2016-03-28 23:21:44.189133"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/home
+Completed 302 Found in 13ms (ActiveRecord: 7.7ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2016-03-28 16:21:44 -0700
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events"
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  Rendered home/home.html.erb within layouts/application (16.5ms)
+Completed 200 OK in 37ms (Views: 35.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/delete" for 127.0.0.1 at 2016-03-28 16:21:46 -0700
+Processing by EventsController#destroy as HTML
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT  "events".* FROM "events" LIMIT 1[0m
+  [1m[35mSQL (1.5ms)[0m  DELETE FROM "events" WHERE "events"."id" = $1  [["id", 115]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-28 16:21:46 -0700
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events"
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  Rendered home/home.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 82ms (Views: 80.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/delete" for 127.0.0.1 at 2016-03-28 16:21:47 -0700
+Processing by EventsController#destroy as HTML
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT  "events".* FROM "events" LIMIT 1[0m
+  [1m[35mSQL (0.9ms)[0m  DELETE FROM "events" WHERE "events"."id" = $1  [["id", 116]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-28 16:21:47 -0700
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  Rendered home/home.html.erb within layouts/application (17.6ms)
+Completed 200 OK in 42ms (Views: 40.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/delete" for 127.0.0.1 at 2016-03-28 16:21:48 -0700
+Processing by EventsController#destroy as HTML
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT  "events".* FROM "events" LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  DELETE FROM "events" WHERE "events"."id" = $1  [["id", 117]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-28 16:21:48 -0700
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  Rendered home/home.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 21ms (Views: 19.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/delete" for 127.0.0.1 at 2016-03-28 16:21:50 -0700
+Processing by EventsController#destroy as HTML
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT  "events".* FROM "events" LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  DELETE FROM "events" WHERE "events"."id" = $1  [["id", 118]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-28 16:21:50 -0700
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  Rendered home/home.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 25ms (Views: 24.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/delete" for 127.0.0.1 at 2016-03-28 16:21:52 -0700
+Processing by EventsController#destroy as HTML
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT  "events".* FROM "events" LIMIT 1[0m
+  [1m[35mSQL (1.1ms)[0m  DELETE FROM "events" WHERE "events"."id" = $1  [["id", 119]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-28 16:21:52 -0700
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  Rendered home/home.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 20ms (Views: 18.8ms | ActiveRecord: 0.5ms)
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-28"]]
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-28"]]
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-28"]]
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-28"]]
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-28"]]
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-28"]]
+
+
+Started GET "/events/new" for 127.0.0.1 at 2016-03-28 16:26:54 -0700
+Processing by EventsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered events/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 82ms (Views: 80.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2016-03-28 16:27:16 -0700
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dg6yt7bhTCJcHFeO7kRb7OFUtCicn4GRIJvDm6g0cTpJlc+WDcM2Mj/JmWQE1Q9kKe0Apl01bW0MSP7yDLzfOA==", "event"=>{"name"=>"Sound viration ", "place"=>"3109932871", "suggest"=>"we shoud go meditate ", "comment"=>""}, "day"=>{"day(1i)"=>"2016", "day(2i)"=>"3", "day(3i)"=>"28"}, "time"=>{"time(1i)"=>"2016", "time(2i)"=>"3", "time(3i)"=>"28", "time(4i)"=>"16", "time(5i)"=>"29"}, "commit"=>"Create Message"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "events" ("name", "place", "suggest", "comment", "day", "time", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["name", "Sound viration "], ["place", "3109932871"], ["suggest", "we shoud go meditate "], ["comment", ""], ["day", "2016-03-28"], ["time", "2000-01-01 16:29:00.000000"], ["user_id", "1"], ["created_at", "2016-03-28 23:27:16.833718"], ["updated_at", "2016-03-28 23:27:16.833718"]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/home
+Completed 302 Found in 6ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2016-03-28 16:27:16 -0700
+Processing by HomeController#home as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  Rendered home/home.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 21ms (Views: 19.6ms | ActiveRecord: 0.8ms)
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-28"]]
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-28"]]
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-28"]]
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-28"]]
+
+
+Started GET "/events/new" for 127.0.0.1 at 2016-03-28 16:30:36 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#new as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered events/new.html.erb within layouts/application (49.7ms)
+Completed 200 OK in 263ms (Views: 220.4ms | ActiveRecord: 5.6ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2016-03-28 16:30:54 -0700
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Y1z7vC/au4Lbt5lPJ0lhKokezVOjmxiapYif67BK1AFcx4adlPjBkrhiV6XN2DWiQad53WIx9GaJW6KCFMJ6Aw==", "event"=>{"name"=>"Sound viration ", "place"=>"3109932871", "suggest"=>"we shoud go meditate ", "comment"=>""}, "day"=>{"day(1i)"=>"2016", "day(2i)"=>"3", "day(3i)"=>"28"}, "time"=>{"time(1i)"=>"2016", "time(2i)"=>"3", "time(3i)"=>"28", "time(4i)"=>"16", "time(5i)"=>"32"}, "commit"=>"Create Message"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "events" ("name", "place", "suggest", "comment", "day", "time", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Sound viration "], ["place", "3109932871"], ["suggest", "we shoud go meditate "], ["comment", ""], ["day", "2016-03-28"], ["time", "2000-01-01 16:32:00.000000"], ["user_id", "1"], ["created_at", "2016-03-28 23:30:54.030187"], ["updated_at", "2016-03-28 23:30:54.030187"]]
+  [1m[35m (0.9ms)[0m  COMMIT
+Redirected to http://localhost:3000/home
+Completed 302 Found in 5ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2016-03-28 16:30:54 -0700
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events"
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  Rendered home/home.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 26ms (Views: 23.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/delete" for 127.0.0.1 at 2016-03-28 16:30:56 -0700
+Processing by EventsController#destroy as HTML
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT  "events".* FROM "events" LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  DELETE FROM "events" WHERE "events"."id" = $1  [["id", 120]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-28 16:30:56 -0700
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events"
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  Rendered home/home.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 28ms (Views: 26.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/delete" for 127.0.0.1 at 2016-03-28 16:30:57 -0700
+Processing by EventsController#destroy as HTML
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT  "events".* FROM "events" LIMIT 1[0m
+  [1m[35mSQL (0.9ms)[0m  DELETE FROM "events" WHERE "events"."id" = $1  [["id", 121]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-28 16:30:57 -0700
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  Rendered home/home.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 19ms (Views: 18.1ms | ActiveRecord: 0.4ms)
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-28"]]
+  [1m[35mEvent Load (1.4ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-28"]]
+
+
+Started GET "/events/new" for 127.0.0.1 at 2016-03-28 16:32:47 -0700
+Processing by EventsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered events/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 75ms (Views: 73.1ms | ActiveRecord: 0.4ms)
+  [1m[35mEvent Load (0.7ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-28"]]
+
+
+Started POST "/events" for 127.0.0.1 at 2016-03-28 16:33:11 -0700
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"l6mkxw3si0FJKhizOebVVW2D82J7go2uxeWgw+01aPmoMtnmts7xUSr/1lnTd4HdpTpH7LooYVLpNp2qSb3G+w==", "event"=>{"name"=>"Sound viration ", "place"=>"3109932871", "suggest"=>"wow", "comment"=>""}, "day"=>{"day(1i)"=>"2016", "day(2i)"=>"3", "day(3i)"=>"28"}, "time"=>{"time(1i)"=>"2016", "time(2i)"=>"3", "time(3i)"=>"28", "time(4i)"=>"16", "time(5i)"=>"36"}, "commit"=>"Create Message"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "events" ("name", "place", "suggest", "comment", "day", "time", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Sound viration "], ["place", "3109932871"], ["suggest", "wow"], ["comment", ""], ["day", "2016-03-28"], ["time", "2000-01-01 16:36:00.000000"], ["user_id", "1"], ["created_at", "2016-03-28 23:33:11.603101"], ["updated_at", "2016-03-28 23:33:11.603101"]]
+  [1m[35m (0.8ms)[0m  COMMIT
+Redirected to http://localhost:3000/home
+Completed 302 Found in 6ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2016-03-28 16:33:11 -0700
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events"
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  Rendered home/home.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 22ms (Views: 20.6ms | ActiveRecord: 0.8ms)
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-28"]]
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-28"]]
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-28"]]
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-28"]]
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-28"]]
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-28"]]
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-28"]]
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-28"]]
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-28"]]
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-28"]]
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-28"]]
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-28"]]
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-28"]]
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-28"]]
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-28"]]
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-28"]]
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-28"]]
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-28"]]
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-28"]]
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-28"]]
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-29 10:29:33 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (1.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#home as HTML
+  [1m[35mUser Load (1.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mEvent Load (1.0ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  Rendered home/home.html.erb within layouts/application (41.1ms)
+Completed 200 OK in 379ms (Views: 340.7ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/assets/application.self-4c48febcd1b10b33b7465032d037408aea96c5c1141ff982185669e4c8ebbded.css?body=1" for 127.0.0.1 at 2016-03-29 10:29:34 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2016-03-29 10:29:34 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 127.0.0.1 at 2016-03-29 10:29:34 -0700
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2016-03-29 10:29:34 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-03-29 10:29:34 -0700
+
+
+Started GET "/events/new" for 127.0.0.1 at 2016-03-29 10:29:37 -0700
+Processing by EventsController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered events/new.html.erb within layouts/application (28.8ms)
+Completed 200 OK in 58ms (Views: 56.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2016-03-29 10:30:02 -0700
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Et9vsgYr3JMyPb1pn1Um1K5PDYMF/sl5YWmxeQj6B70tRBKTvQmmg1Hoc4N1xHJcZva5DcRUJYVNuowQrHKpvw==", "event"=>{"name"=>"Sound viration ", "place"=>"3109932871", "suggest"=>"we shoud go meditate ", "comment"=>""}, "day"=>{"day(1i)"=>"2016", "day(2i)"=>"3", "day(3i)"=>"29"}, "time"=>{"time(1i)"=>"2016", "time(2i)"=>"3", "time(3i)"=>"29", "time(4i)"=>"10", "time(5i)"=>"31"}, "commit"=>"Create Message"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.5ms)[0m  [1mINSERT INTO "events" ("name", "place", "suggest", "comment", "day", "time", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Sound viration "], ["place", "3109932871"], ["suggest", "we shoud go meditate "], ["comment", ""], ["day", "2016-03-29"], ["time", "2000-01-01 10:31:00.000000"], ["user_id", "1"], ["created_at", "2016-03-29 17:30:02.511880"], ["updated_at", "2016-03-29 17:30:02.511880"]]
+  [1m[35m (0.9ms)[0m  COMMIT
+Redirected to http://localhost:3000/home
+Completed 302 Found in 8ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2016-03-29 10:30:02 -0700
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events"
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  Rendered home/home.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 30ms (Views: 28.4ms | ActiveRecord: 1.0ms)
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-29"]]
+  [1m[35mEvent Load (0.5ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-29"]]
+  [1m[36mEvent Load (0.6ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-29"]]
+
+
+Started GET "/home" for 127.0.0.1 at 2016-03-29 10:32:39 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#home as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mEvent Load (0.6ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  Rendered home/home.html.erb within layouts/application (31.9ms)
+Completed 200 OK in 346ms (Views: 312.6ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/assets/application.self-4c48febcd1b10b33b7465032d037408aea96c5c1141ff982185669e4c8ebbded.css?body=1" for 127.0.0.1 at 2016-03-29 10:32:40 -0700
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2016-03-29 10:32:40 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2016-03-29 10:32:40 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 127.0.0.1 at 2016-03-29 10:32:40 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-03-29 10:32:40 -0700
+
+
+Started GET "/events/new" for 127.0.0.1 at 2016-03-29 10:32:42 -0700
+Processing by EventsController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered events/new.html.erb within layouts/application (19.6ms)
+Completed 200 OK in 48ms (Views: 46.0ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2016-03-29 10:33:03 -0700
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5gE+F1zKGFwWySF52D6nlBzX6GkfjuWdoU3q2I7G/3rZmkM25+hiTHUc75Myr/Mc1G5c594kCWGNntexKk5ReA==", "event"=>{"name"=>"Sound viration ", "place"=>"3109932871", "suggest"=>"we shoud go meditate ", "comment"=>""}, "day"=>{"day(1i)"=>"2016", "day(2i)"=>"3", "day(3i)"=>"29"}, "time"=>{"time(1i)"=>"2016", "time(2i)"=>"3", "time(3i)"=>"29", "time(4i)"=>"10", "time(5i)"=>"34"}, "commit"=>"Create Message"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "events" ("name", "place", "suggest", "comment", "day", "time", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Sound viration "], ["place", "3109932871"], ["suggest", "we shoud go meditate "], ["comment", ""], ["day", "2016-03-29"], ["time", "2000-01-01 10:34:00.000000"], ["user_id", "1"], ["created_at", "2016-03-29 17:33:03.070554"], ["updated_at", "2016-03-29 17:33:03.070554"]]
+  [1m[35m (1.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/home
+Completed 302 Found in 7ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2016-03-29 10:33:03 -0700
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events"
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  Rendered home/home.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 31ms (Views: 29.2ms | ActiveRecord: 1.0ms)
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-29"]]
+  [1m[35mEvent Load (0.5ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-29"]]
+  [1m[36mEvent Load (0.7ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-29"]]
+  [1m[35mEvent Load (0.6ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-29"]]
+  [1m[36mEvent Load (0.6ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-29"]]
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-29"]]
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-29"]]
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-29"]]
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-29"]]
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-29"]]
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-29"]]
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-29"]]
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-29"]]
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-29"]]
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-29"]]
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-29"]]
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-29"]]
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-29"]]
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-29"]]
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-29"]]
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-29"]]
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-29"]]
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-29"]]
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-29"]]
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-29"]]
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-29"]]
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-29"]]
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-29"]]
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-29"]]
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-29"]]
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-29"]]
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-29"]]
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-29"]]
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-29"]]
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-29"]]
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-29"]]
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-29"]]
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-29"]]
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-29"]]
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-29"]]
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-29"]]
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-29"]]
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-29"]]
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-29"]]
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-29"]]
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-29"]]
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-29"]]
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-29"]]
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-29"]]
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-29"]]
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-29"]]
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-29"]]
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-29"]]
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-29"]]
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-29"]]
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-29"]]
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-29"]]
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-29"]]
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-29"]]
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-29"]]
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-29"]]
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-29"]]
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-29"]]
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-29"]]
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-29"]]
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-29"]]
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-29"]]
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-29"]]
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-29"]]
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-29"]]
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-29"]]
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-29"]]
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-29"]]
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-29"]]
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-29"]]
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-29"]]
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-29"]]
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-29"]]
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-29"]]
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-29"]]
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-29"]]
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-29"]]
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-29"]]
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-29"]]
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-29"]]
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-29"]]
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-29"]]
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-29"]]
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-29"]]
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-29"]]
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-29"]]
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-29"]]
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-29"]]
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-29"]]
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-29"]]
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-29"]]
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-29"]]
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-29"]]
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-29"]]
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-29"]]
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-29"]]
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-29"]]
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-29"]]
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-29"]]
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-29"]]
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-29"]]
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-29"]]
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-29"]]
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-29"]]
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-29"]]
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-29"]]
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-29"]]
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-29"]]
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-29"]]
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-29"]]
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-29"]]
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-29"]]
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-29"]]
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-29"]]
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-29"]]
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-29"]]
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-29"]]
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-29"]]
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-29"]]
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-29"]]
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-29"]]
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-29"]]
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-29"]]
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-29"]]
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-29"]]
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-29"]]
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-29"]]
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-29"]]
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-29"]]
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-29"]]
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-29"]]
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-29"]]
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-29"]]
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-29"]]
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-29"]]
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-29"]]
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-29"]]
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-29"]]
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-29"]]
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-29"]]
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-29"]]
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-29"]]
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-29"]]
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-29"]]
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-29"]]
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-29"]]
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-29"]]
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-29"]]
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-29"]]
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-29"]]
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-29"]]
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-29"]]
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-29"]]
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-29"]]
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-29"]]
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-29"]]
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-29"]]
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-29"]]
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-29"]]
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-29"]]
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-29"]]
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-29"]]
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-29 14:37:29 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#home as HTML
+  Rendered home/home.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 256ms (Views: 235.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-4c48febcd1b10b33b7465032d037408aea96c5c1141ff982185669e4c8ebbded.css?body=1" for 127.0.0.1 at 2016-03-29 14:37:29 -0700
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2016-03-29 14:37:29 -0700
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 127.0.0.1 at 2016-03-29 14:37:29 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2016-03-29 14:37:29 -0700
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2016-03-29 14:37:29 -0700
+
+
+Started GET "/login" for 127.0.0.1 at 2016-03-29 14:37:31 -0700
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 61ms (Views: 60.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2016-03-29 14:37:36 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QCeGXRmFb7GNnAXnMgvNi9iEiqHL5w01PUTge2EhvDx3W7z1CZVD9ZJ98QdxYKPg0ncZoTEnWJN+siA3bmtWVA==", "email"=>"lala@gmail.com", "password"=>"[FILTERED]", "commit"=>"login"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT 1  [["email", "lala@gmail.com"]]
+Redirected to http://localhost:3000/home
+Completed 302 Found in 83ms (ActiveRecord: 4.1ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2016-03-29 14:37:36 -0700
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mEvent Load (0.6ms)[0m  SELECT "events".* FROM "events"
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  Rendered home/home.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 30ms (Views: 26.8ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/delete" for 127.0.0.1 at 2016-03-29 14:37:39 -0700
+Processing by EventsController#destroy as HTML
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT  "events".* FROM "events" LIMIT 1[0m
+  [1m[35mSQL (1.1ms)[0m  DELETE FROM "events" WHERE "events"."id" = $1  [["id", 123]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-29 14:37:39 -0700
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events"
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  Rendered home/home.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 22ms (Views: 20.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/delete" for 127.0.0.1 at 2016-03-29 14:37:40 -0700
+Processing by EventsController#destroy as HTML
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT  "events".* FROM "events" LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  DELETE FROM "events" WHERE "events"."id" = $1  [["id", 124]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-29 14:37:40 -0700
+Processing by HomeController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events"
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  Rendered home/home.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 19ms (Views: 17.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2016-03-29 14:37:43 -0700
+Processing by EventsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered events/new.html.erb within layouts/application (74.7ms)
+Completed 200 OK in 98ms (Views: 96.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2016-03-29 14:37:59 -0700
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"15Aok9Hrw8g2ACt0PgsnZ59jh8Zj9KwxNpzcJpRHVVXg7BI7wfvvjCnh35R9YEkMlZAUxpk0+Zd1ahxqmw2/PQ==", "event"=>{"name"=>"cool stuff dude", "place"=>"3109932871", "suggest"=>"we shoud go meditate ", "comment"=>""}, "day"=>{"day(1i)"=>"2016", "day(2i)"=>"3", "day(3i)"=>"29"}, "time"=>{"time(1i)"=>"2016", "time(2i)"=>"3", "time(3i)"=>"29", "time(4i)"=>"14", "time(5i)"=>"39"}, "commit"=>"Create Message"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "events" ("name", "place", "suggest", "comment", "day", "time", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["name", "cool stuff dude"], ["place", "3109932871"], ["suggest", "we shoud go meditate "], ["comment", ""], ["day", "2016-03-29"], ["time", "2000-01-01 14:39:00.000000"], ["user_id", "1"], ["created_at", "2016-03-29 21:37:59.732007"], ["updated_at", "2016-03-29 21:37:59.732007"]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/home
+Completed 302 Found in 5ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2016-03-29 14:37:59 -0700
+Processing by HomeController#home as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  Rendered home/home.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 20ms (Views: 19.2ms | ActiveRecord: 0.5ms)
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-29"]]
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."day" = $1[0m  [["day", "2016-03-29"]]
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events" WHERE "events"."day" = $1  [["day", "2016-03-29"]]

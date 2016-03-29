@@ -63,7 +63,9 @@ class EventsController < ApplicationController
     time = Time.new
     time = time.strftime("%H:%M")
     @message.each do |t|
-      #if t[:time].strftime("%H:%M") == time
+      if t[:time].strftime("%H:%M") == time
+
+      puts t[:time].strftime("%H:%M")
       #Time spread contains time from not till 10 minutes from now
       i = 0
       v = 0
@@ -96,7 +98,7 @@ class EventsController < ApplicationController
     @client = Twilio::REST::Client.new account_sid, auth_token
     message = @client.account.messages.create(:body => message,
                                               :to => "+1#{phone}",
-                                              :from => "+18056284526"
+                                              :from => "3237989892"
     )
     puts message.to
   end
