@@ -1,6 +1,7 @@
 require 'rufus-scheduler'
 
 
+
 class Schedule < EventsController
 
   @message = EventsController.new

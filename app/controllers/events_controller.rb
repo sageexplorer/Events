@@ -63,21 +63,21 @@ class EventsController < ApplicationController
     time = Time.new
     time = time.strftime("%H:%M")
     @message.each do |t|
-      if t[:time].strftime("%H:%M") == time
+       t[:time].strftime("%H:%M") == time
 
-      puts t[:time].strftime("%H:%M")
-      #Time spread contains time from not till 10 minutes from now
-      i = 0
-      v = 0
-      time_spread = []
-      while i < 15 do
-        v = v + 60
-        time_ = Time.now + v
-        i+=1
-        time_spread.push(time_.strftime("%H:%M"))
-      end
-        #If time from now till 10 minutes from now contains the time in the database
-        if time_spread.include? (t[:time].strftime("%H:%M"))
+      #puts t[:time].strftime("%H:%M")
+      ##Time spread contains time from not till 10 minutes from now
+      #i = 0
+      #v = 0
+      #time_spread = []
+      #while i < 15 do
+      #  v = v + 60
+      #  time_ = Time.now + v
+      #  i+=1
+      #  time_spread.push(time_.strftime("%H:%M"))
+      #end
+      ##If time from now till 10 minutes from now contains the time in the database
+      #if time_spread.include? (t[:time].strftime("%H:%M"))
 
         message= t["suggest"]
         phone = t["place"]
@@ -88,10 +88,10 @@ class EventsController < ApplicationController
           puts "No messages to send"
         end
       end
-    end
+   # end
   end
 
-  #This calculates when to send message
+    #This calculates when to send message
   def calculate(message, phone)
     account_sid = 'AC8b0a0fa81e3da83139a539e6f35e0aa0'
     auth_token = '498edb1d855606b977eaa49efa6d7e50'
