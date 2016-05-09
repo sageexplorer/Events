@@ -15,9 +15,9 @@
 # gem 'pg'
 #
 default: &default
-  #adapter: postgresql
+  adapter: postgresql
   pool: 5
-  adapter: sqlite3
+  #adapter: sqlite3
   timeout: 5000
   # For details on connection pooling, see rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
@@ -81,7 +81,11 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  <<: *default
-  database: events_production
-  username: events
-  password: <%= ENV['EVENTS_DATABASE_PASSWORD'] %>
+    <<: *default
+    adapter: postgresql
+    encoding: unicode
+    database: <%= ENV['RDS_DB_NAME'] %>
+    username: <%= ENV['RDS_USERNAME'] %>
+    password: <%= ENV['RDS_PASSWORD'] %>
+    host: <%= ENV['RDS_HOSTNAME'] %>
+    port: <%= ENV['RDS_PORT'] %>
